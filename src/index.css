@@ -3,16 +3,78 @@
 @tailwind utilities;
 
 :root {
-  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #FAFAFA;
+  background-color: #2B2B2B;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 28.38px;
+  font-weight: 500;
+  letter-spacing: +0.26px;
+}
+
+h2 {
+  font-size: 25.23px;
+  font-weight: 500;
+  letter-spacing: +0.36px;
+}
+
+h3 {
+  font-size: 22.43px;
+  font-weight: 500;
+  letter-spacing: +0.46px;
+}
+
+h4 {
+  font-size: 19.93px;
+  font-weight: 500;
+  letter-spacing: +0.46px;
+}
+
+h5 {
+  font-size: 17.72px;
+  font-weight: 400;
+  letter-spacing: +0.56px;
+}
+
+h6 {
+  font-size: 15.75px;
+  font-weight: 500;
+  letter-spacing: +0.56px;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: +0.46px;
+}
+
+small {
+  font-size: 12.44px;
+  font-weight: 500;
+  letter-spacing: +0.23px;
+}
+
+caption {
+  font-size: 11.06px;
+  font-weight: 500;
+  letter-spacing: +0.43px;
+}
+
+.app_container {
+  @apply w-screen h-screen overflow-hidden relative;
+}
+
+.page_container {
+  @apply w-full h-full;
 }
