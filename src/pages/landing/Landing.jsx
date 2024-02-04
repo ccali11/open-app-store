@@ -55,13 +55,18 @@ export const Landing = () => {
       
       <div className='fixed left-0 bottom-0 w-full z-[3]'>
         <div className="min-h-[100px] w-full max-w-[700px] mx-auto bg-primary_bg pb-[24px] z-[3]">
-            <div className='flex items-center gap-[8px]'>
+            <label 
+              htmlFor='chat-input-prompt'
+              className='flex items-center gap-[8px]'
+            >
               <ChevronDoubleRightIcon className='w-[12px] h-[12px]'/>
               <small>What kind of software are you hunting for?</small>
-            </div>
+            </label>
             <div className='pl-[25px] mt-[10px]'>
               <div className='border-b flex items-center gap-[12px] pb-[4px]'>
                 <input 
+                id='chat-input-prompt'
+                name='chat-input-prompt'
                 type="text" 
                 className='w-full outline-none bg-transparent'
                 value={inputValue}
