@@ -3,9 +3,13 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: "Inter Tight", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+  font-size: 12px;
 
   color-scheme: light dark;
   color: #FAFAFA;
@@ -18,63 +22,70 @@
 }
 
 h1 {
-  font-size: 28.38px;
-  font-weight: 500;
-  letter-spacing: +0.26px;
+  font-size: 2.027rem;
+  font-weight: 600;
 }
 
 h2 {
-  font-size: 25.23px;
-  font-weight: 500;
-  letter-spacing: +0.36px;
+  font-size: 1.802rem;
+  font-weight: 600;
+  letter-spacing: normal;
 }
 
 h3 {
-  font-size: 22.43px;
-  font-weight: 500;
-  letter-spacing: +0.46px;
+  font-size: 1.602rem;
+  font-weight: 600;
+  letter-spacing: normal;
 }
 
 h4 {
-  font-size: 19.93px;
+  font-size: 1.424rem;
   font-weight: 500;
-  letter-spacing: +0.46px;
+  letter-spacing: normal;
 }
 
 h5 {
-  font-size: 17.72px;
-  font-weight: 400;
-  letter-spacing: +0.56px;
+  font-size: 1.266rem;
+  font-weight: 500;
+  letter-spacing: normal;
 }
 
 h6 {
-  font-size: 15.75px;
+  font-size: 1.125rem;
   font-weight: 500;
-  letter-spacing: +0.56px;
+  letter-spacing: normal;
 }
 
 p {
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: +0.46px;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: normal;
 }
 
 small {
-  font-size: 12.44px;
+  font-size: 0.899rem; 
   font-weight: 500;
-  letter-spacing: +0.23px;
+  letter-spacing: 0.8px;
 }
 
 caption {
-  font-size: 11.06px;
-  font-weight: 500;
-  letter-spacing: +0.43px;
+  white-space: nowrap;
+  font-size: 0.79rem; 
+  font-style: italic; 
+  font-weight: 400;
+  letter-spacing: 1px;
 }
-
 .app_container {
   @apply w-screen h-screen overflow-hidden relative;
 }
 
 .page_container {
   @apply w-full h-full;
+}
+
+
+.pill{
+  @apply flex items-center justify-center px-[8px]
+  py-[4px] bg-primary_white text-primary_bg
+  rounded-[8px];
 }

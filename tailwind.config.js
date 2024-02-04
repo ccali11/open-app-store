@@ -6,7 +6,12 @@ export default {
     "./src/index.css"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary_bg: '#2B2B2B',
+        primary_white: '#FAFAFA'
+      }
+    },
   },
   plugins: [],
 }
