@@ -1,3 +1,5 @@
+// TODO: Should we have backslash commands such as \clear to clear convo and more??
+
 import { useState } from 'react';
 import {
   ChevronDoubleRightIcon,
@@ -23,11 +25,11 @@ export const Landing = () => {
     } else {
       const currentInput = e.target.value.trim();
       const newKeywords = currentInput.split(' ');
-      // get keywords from the current input here
+      // TODO: get AI response for keywords from the current input here
       setKeywords(newKeywords);
     }
 
-    // Get AI response here
+    // TODO: Get AI response here
   };
 
   const handleClearInput = () => {
