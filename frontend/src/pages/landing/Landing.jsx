@@ -1,6 +1,6 @@
 // TODO: Should we have backslash commands such as \clear to clear convo and more??
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   ChevronDoubleRightIcon,
   XMarkIcon,
@@ -14,6 +14,7 @@ export const Landing = () => {
   const [inputValue, setInputValue] = useState('');
   const [keywords, setKeywords] = useState([]);
 
+  const [globalKeywords, setGlobalKeywords] = useState([]);
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
       // TODO: conversation value needs to change to 
@@ -36,6 +37,25 @@ export const Landing = () => {
     setInputValue('');
     setKeywords([]);
   };
+
+  useEffect(() => {
+    fetch('http://localhost:3002/api/keywords')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to fetch keywords');
+            }
+
+            return response.json();
+        })
+        .then(data => {
+            const keywords = data[0].keywords
+            const parsedJSON = JSON.parse(keywords)
+            setGlobalKeywords(parsedJSON.keywords);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+  }, []);
 
   const listConversations = conversation.map((item, index) => (
     <li key={index}>{item}</li>
